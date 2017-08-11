@@ -266,6 +266,7 @@ div.input-mask {
 /**
  * Sidebar
  */
+ 
 #sidebar-wrapper {
   background: #30426a;
 }
@@ -384,6 +385,11 @@ ul.sidebar .sidebar-list .menu-icon {
 .sidebar-footer div a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+.active{
+  background: #2d3e63;
+  border-left: 3px solid #e99d1a;
 }
 
 /* #592727 RED */
