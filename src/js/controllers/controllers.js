@@ -9,10 +9,10 @@ angular
 function AlertsCtrl($scope) {
     $scope.alerts = [{
         type: 'success',
-        msg: 'Thanks for visiting! Feel free to create pull requests to improve the dashboard!'
+        msg: 'از این که ما را انتخاب کردید متشکریم، ما را در بهبود این نرم افزار یاری نمایید.'
     }, {
         type: 'danger',
-        msg: 'Found a bug? Create an issue with as many details as you can.'
+        msg: 'آیا اشکالی در نرم افزار یافتید؟ آن را سریعا به ما گزارش دهید!'
     }];
 
     $scope.addAlert = function () {
