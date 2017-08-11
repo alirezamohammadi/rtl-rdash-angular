@@ -17,6 +17,7 @@ var paths = {
     templates: 'src/templates/**/*.html',
     index: 'src/index.html',
     bower_fonts: 'src/components/**/*.{ttf,woff,eof,svg}',
+    ui_fonts: './src/rdash-ui/**/*.{ttf,woff,eof,svg}'
 };
 
 /**
@@ -37,12 +38,14 @@ gulp.task('usemin', function() {
 gulp.task('build-assets', ['copy-bower_fonts']);
 
 gulp.task('copy-bower_fonts', function() {
-    return gulp.src(paths.bower_fonts)
+    return gulp.src([paths.bower_fonts, paths.ui_fonts])
         .pipe(rename({
             dirname: '/fonts'
         }))
         .pipe(gulp.dest('dist/lib'));
 });
+
+
 
 /**
  * Handle custom files
