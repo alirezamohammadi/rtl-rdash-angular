@@ -26,7 +26,8 @@
     "angular-ui-router": "^0.2.15",
     "bootstrap": "~3.3.6",
     "font-awesome": "~4.5.0",
-    "bootstrap-rtl": "^3.4.0"
+    "bootstrap-rtl": "^3.4.0",
+    "samim-font": "^1.0.2"
   },
   "repository": {
     "type": "git",
