@@ -1,10 +1,11 @@
 var gulp = require('gulp'),
-    usemin = require('gulp-usemin'),
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
     wrap = require('gulp-wrap'),
     connect = require('gulp-connect'),
     watch = require('gulp-watch'),
     minifyCss = require('gulp-cssnano'),
-    minifyJs = require('gulp-uglify'),
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
@@ -23,12 +24,11 @@ var paths = {
 /**
  * Handle bower components from index
  */
-gulp.task('usemin', function () {
+gulp.task('useref', function () {
     return gulp.src(paths.index)
-        .pipe(usemin({
-            js: [minifyJs(), 'concat'],
-            css: [minifyCss({ keepSpecialComments: 0 }), 'concat'],
-        }))
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('dist/'));
 });
 
@@ -59,7 +59,7 @@ gulp.task('custom-images', function () {
 
 gulp.task('custom-js', function () {
     return gulp.src(paths.scripts)
-        .pipe(minifyJs())
+        .pipe(uglify())
         .pipe(concat('dashboard.min.js'))
         .pipe(gulp.dest('dist/js'));
 });
@@ -84,7 +84,7 @@ gulp.task('watch', function () {
     gulp.watch([paths.styles], ['custom-less']);
     gulp.watch([paths.scripts], ['custom-js']);
     gulp.watch([paths.templates], ['custom-templates']);
-    gulp.watch([paths.index], ['usemin']);
+    gulp.watch([paths.index], ['useref']);
 });
 
 /**
@@ -107,5 +107,5 @@ gulp.task('livereload', function () {
 /**
  * Gulp tasks
  */
-gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
+gulp.task('build', ['useref', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
