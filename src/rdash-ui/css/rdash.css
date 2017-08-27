@@ -322,9 +322,9 @@ ul.sidebar .sidebar-title {
   text-transform: uppercase;
   transition: all .6s ease 0s;
 }
-ul.sidebar .sidebar-list {
+/* ul.sidebar .sidebar-list {
   height: 40px;
-}
+} */
 ul.sidebar .sidebar-list a {
   text-indent: 25px;
   font-size: 15px;

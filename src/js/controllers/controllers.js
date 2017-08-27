@@ -66,3 +66,19 @@ function MasterCtrl($scope, $cookieStore) {
         $scope.$apply();
     };
 }
+
+/**
+ * Side Menu
+ */
+
+angular.module("RDash")
+    .controller("menuCtrl", function ($scope) {
+        $scope.openMenu = 0;
+        $scope.setOpenMenu = function(num){
+            if(num == $scope.openMenu)
+                $scope.openMenu=0;
+            else
+                $scope.openMenu = num;
+            console.log($scope.openMenu);
+        }
+    });
