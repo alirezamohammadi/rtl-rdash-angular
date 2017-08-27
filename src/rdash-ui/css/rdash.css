@@ -297,6 +297,7 @@ ul.sidebar li a {
 }
 ul.sidebar .sidebar-main {
   height: 65px;
+  color: white;
 }
 ul.sidebar .sidebar-main a {
   font-size: 18px;
