@@ -17,12 +17,12 @@ var paths = {
     images: 'src/img/**/*.*',
     templates: 'src/templates/**/*.html',
     index: 'src/index.html',
-    bower_fonts: 'src/components/**/*.{ttf,woff,eof,svg,woff2}',
+    bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg,woff2}',
     ui_fonts: 'src/rdash-ui/**/*.{ttf,woff,eof,svg,woff2}'
 };
 
 /**
- * Handle bower components from index
+ * Handle bower bower_components from index
  */
 gulp.task('useref', function () {
     return gulp.src(paths.index)
