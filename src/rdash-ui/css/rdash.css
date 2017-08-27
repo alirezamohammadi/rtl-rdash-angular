@@ -85,7 +85,7 @@
   display: block;
 }
 .row.header .user {
-  min-width: 130px;
+  margin: 0px 5px 0px 15px;
 }
 .row.header .user > .item {
   width: 65px;
@@ -98,16 +98,17 @@
 .row.header .user > .item a {
   color: #919191;
   display: block;
+  text-decoration: none;
 }
 .row.header .user > .item i {
   font-size: 20px;
-  line-height: 55px;
+  line-height: 50px;
 }
 .row.header .user > .item img {
-  width: 40px;
   height: 40px;
   margin-top: 10px;
-  border-radius: 2px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 .row.header .user > .item ul.dropdown-menu {
   border-radius: 2px;
