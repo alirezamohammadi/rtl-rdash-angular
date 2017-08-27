@@ -20,7 +20,7 @@
   <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.slim.min.js"></script>
-  <script src="bower_components/popper.js/dist/popper.min.js"></script>
+  <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   
   <!-- Custom Scripts -->
@@ -77,64 +77,52 @@
         <div class="row header">
           <div class="col-xs-12">
             <div class="user float-right">
-              <div class="item dropdown" uib-dropdown>
-                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+              <div class="item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="img/avatar.jpg">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
+                  <li class="dropdown-item">
                     علیرضا محمدی
                   </li>
-                  <li class="divider"></li>
-                  <li class="link">
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-item">
                     <a href="#">
                       پروفایل
                     </a>
                   </li>
-                  <li class="link">
+                  <li class="dropdown-item">
                     <a href="#">
                       منو آیتم
                     </a>
                   </li>
-                  <li class="link">
+                  <li class="dropdown-item">
                     <a href="#">
                       یک منو آیتم دیگر
                     </a>
                   </li>
-                  <li class="divider"></li>
-                  <li class="link">
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-item">
                     <a href="#">
                       خروج
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-danger">Action</button>
-                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </div>
-              <div class="item dropdown" uib-dropdown>
-               <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+
+              <div class="item dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
+                  <li class="dropdown-item">
                     توتیفیکشن ها
                   </li>
-                  <li class="divider"></li>
-                  <li>
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-item">
                     <a href="#">5 پیام دریافت شد</a>
                   </li>
-                  <li>
+                  <li class="dropdown-item">
                     <a href="#">سرور از دسترس خارج شد!</a>
                   </li>
                 </ul>
