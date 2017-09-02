@@ -33,7 +33,10 @@
   <style>
   .dropdown-menu{
     left: inherit!important;
-    
+  }
+  li.sidebar-list ul{
+    list-style: none;
+    position: absolute;
   }
   </style>
 
@@ -44,7 +47,7 @@
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-      <ul class="sidebar">
+      <ul class="sidebar" id="accordion" role="tablist" aria-multiselectable="true">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
             آر - دَشـــــــــ
@@ -52,8 +55,13 @@
           </a>
         </li>
         <li class="sidebar-title"><span>منوی اصلی</span></li>
-        <li class="sidebar-list">
-          <a ui-sref="index" ui-sref-active="active">داشبورد<span class="menu-icon fa fa-tachometer"></span></a>
+        <li class="sidebar-list" role="tab" id="headingOne">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">داشبورد<span class="menu-icon fa fa-tachometer"></span></a>
+          <ul id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+            <li>افزودن</li>
+            <li>ویرایش</li>
+            <li>حذف</li>
+          </ul>
         </li>
         <li class="sidebar-list">
           <a ui-sref="tables" ui-sref-active="active">جدول ها<span class="menu-icon fa fa-table"></span></a>
